@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Cliente {
     private static Scanner sc = new Scanner(System.in);
-    public static List<Cliente> clientes = new ArrayList<>(); // Agora é public
+    public static List<Cliente> clientes = new ArrayList<>(); 
     private String nome;
     private String cpf;
     private String endereco;
@@ -92,7 +92,7 @@ public class Cliente {
         }
     }
 
-    public static Cliente encontrarClientePorCpf(String cpf) { // Tornado público
+    public static Cliente encontrarClientePorCpf(String cpf) { 
         for (Cliente cliente : clientes) {
             if (cliente.getCpf().equals(cpf)) {
                 return cliente;

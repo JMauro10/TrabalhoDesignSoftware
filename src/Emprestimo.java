@@ -21,7 +21,7 @@ public class Emprestimo {
         this.dataDevolucaoPrevista = dataDevolucaoPrevista;
         this.dataDevolucaoReal = null;
 
-        livro.diminuirQuantidade(); // Diminuindo a quantidade do livro ao emprestar
+        livro.diminuirQuantidade(); 
     }
 
     public Cliente getCliente() {
@@ -47,7 +47,7 @@ public class Emprestimo {
     public static void realizarEmprestimo(Cliente cliente, Livro livro, Date dataDevolucaoPrevista) {
         Emprestimo emprestimo = new Emprestimo(cliente, livro, dataDevolucaoPrevista);
         emprestimos.add(emprestimo);
-        registrarLivroMaisEmprestado(livro); // Registro de livro mais emprestado
+        registrarLivroMaisEmprestado(livro); 
         System.out.println("Empréstimo realizado com sucesso!");
     }
 
@@ -55,7 +55,7 @@ public class Emprestimo {
         for (Emprestimo emprestimo : emprestimos) {
             if (emprestimo.getCliente().equals(cliente) && emprestimo.getLivro().equals(livro)) {
                 emprestimo.dataDevolucaoReal = new Date();
-                livro.aumentarQuantidade(); // Aumentando a quantidade do livro ao devolver
+                livro.aumentarQuantidade(); 
                 System.out.println("Livro devolvido com sucesso!");
                 return;
             }

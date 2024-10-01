@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Livro {
     private static Scanner sc = new Scanner(System.in);
-    public static List<Livro> livros = new ArrayList<>(); // Agora é public
+    public static List<Livro> livros = new ArrayList<>(); 
     private int id;
     private String titulo;
     private String autor;
@@ -61,7 +61,7 @@ public class Livro {
         System.out.print("Quantidade Disponível: ");
         int quantidadeDisponivel = Integer.parseInt(sc.nextLine());
 
-        int id = livros.size() + 1; // Gera um ID sequencial
+        int id = livros.size() + 1; 
         Livro livro = new Livro(id, titulo, autor, anoPublicacao, quantidadeDisponivel);
         livros.add(livro);
         System.out.println("Livro cadastrado com sucesso!");
@@ -115,7 +115,7 @@ public class Livro {
         }
     }
 
-    public static Livro encontrarLivroPorId(int id) { // Tornado público
+    public static Livro encontrarLivroPorId(int id) { 
         for (Livro livro : livros) {
             if (livro.getId() == id) {
                 return livro;
