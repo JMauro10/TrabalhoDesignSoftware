@@ -1,6 +1,9 @@
+package controller;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.util.Date;
+import model.Livro;
+import model.Cliente;
 
 public class Biblioteca {
     private static Scanner sc = new Scanner(System.in);

@@ -1,8 +1,11 @@
+package controller;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import model.Livro;
+import model.Cliente;
 
 public class Emprestimo {
     private static List<Emprestimo> emprestimos = new ArrayList<>();
